@@ -5,12 +5,10 @@ module.exports = {
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
-    screens: {
-      phone: "375px",
-      tablet: "768px",
-      desktop: "1440px",
-    },
     extend: {
+      screens: {
+        '2xl': "1440px"
+      },
       colors: {
         cobalt: {
           50: "#eef7ff",

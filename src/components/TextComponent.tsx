@@ -23,7 +23,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="h1"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-bold text-[28px] leading-[39.2px] desktop:text-[36px] desktop:leading-[50.4px] ${classNameValue}`}
+                className={`font-bold text-[28px] leading-[39.2px] 2xl:text-[36px] 2xl:leading-[50.4px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -34,7 +34,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="h2"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-bold text-[25px] leading-[35px] desktop:text-[32px] desktop:leading-[44.8px] ${classNameValue}`}
+                className={`font-bold text-[25px] leading-[35px] 2xl:text-[32px] 2xl:leading-[44.8px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -45,7 +45,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="h3"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-normal text-[22px] leading-[30.8px] desktop:text-[26px] desktop:leading-[36.4px] ${classNameValue}`}
+                className={`font-normal text-[22px] leading-[30.8px] 2xl:text-[26px] 2xl:leading-[36.4px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -56,7 +56,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="h4"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-bold text-[19px] leading-[26.6px] desktop:text-[22px] desktop:leading-[30.8px] ${classNameValue}`}
+                className={`font-bold text-[19px] leading-[26.6px] 2xl:text-[22px] 2xl:leading-[30.8px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -67,7 +67,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="h5"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-normal text-[18px] leading-[25.2px] desktop:text-[20px] desktop:leading-[28px] ${classNameValue}`}
+                className={`font-normal text-[18px] leading-[25.2px] 2xl:text-[20px] 2xl:leading-[28px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -78,7 +78,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="span"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-bold text-[15px] leading-[19.5px] desktop:text-[17px] desktop:leading-[22.1px] ${classNameValue}`}
+                className={`font-bold text-[15px] leading-[19.5px] 2xl:text-[17px] 2xl:leading-[22.1px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -89,7 +89,7 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 component="p"
                 {...colorValue}
                 {...fontWeightValue}
-                className={`font-normal text-[17px] leading-[25.5px] desktop:text-[18px] desktop:leading-[27px] ${classNameValue}`}
+                className={`font-normal text-[17px] leading-[25.5px] 2xl:text-[18px] 2xl:leading-[27px] ${classNameValue}`}
               >
                 {children}
               </Text>
@@ -105,13 +105,24 @@ const TextComponent: React.FC<TextProps> = ({children, type, fontWeight, color, 
                 {children}
               </Text>
             );
-            default: 
+          case "menu":
             return (
               <Text
-                component="p"
+                component="span"
                 {...colorValue}
                 {...fontWeightValue}
-                {...{className}}
+                className={`font-normal text-[16px] leading-[24px] ${classNameValue}`}
+              >
+                {children}
+              </Text>
+            );
+          default:
+            return (
+              <Text
+                component="span"
+                {...colorValue}
+                {...fontWeightValue}
+                {...{ className }}
               >
                 {children}
               </Text>
