@@ -56,6 +56,19 @@ const themeOverride = createTheme({
       "#314577",
       "#222c49",
     ],
+    white: [
+      "#ffffff",
+      "#efefef",
+      "#dcdcdc",
+      "#bdbdbd",
+      "#989898",
+      "#7c7c7c",
+      "#656565",
+      "#525252",
+      "#464646",
+      "#3d3d3d",
+      "#292929",
+    ],
   },
 });
 

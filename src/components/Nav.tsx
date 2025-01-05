@@ -144,7 +144,7 @@ const Nav: React.FC<NavProps> = ({ className }) => {
             width={55}
             height={55}
           />
-          <Text fw={600} fz={16} lh="20.8px" c="woodsmoke.10">
+          <Text fw={600} fz={16} lh="20.8px" c="woodsmoke.10" className="hidden md:block">
             DiscountsOnServices
           </Text>
         </div>
