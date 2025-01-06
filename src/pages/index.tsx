@@ -1,9 +1,9 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import Container from "../components/Container";
 import Nav from "../components/Nav";
 import StartBlock from "../components/StartBlock";
 import SubscriptionBlock from "../components/SubscriptionBlock";
+import HowWorksBlock from "../components/HowWorksBlock";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -12,6 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Nav />
       <StartBlock />
       <SubscriptionBlock />
+      <HowWorksBlock />
     </>
   );
 }
