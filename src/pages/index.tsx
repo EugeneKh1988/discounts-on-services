@@ -4,6 +4,8 @@ import Nav from "../components/Nav";
 import StartBlock from "../components/StartBlock";
 import SubscriptionBlock from "../components/SubscriptionBlock";
 import HowWorksBlock from "../components/HowWorksBlock";
+import InviteBlock from "../components/InviteBlock";
+import AboutBlock from "../components/AboutBlock";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -13,6 +15,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <StartBlock />
       <SubscriptionBlock />
       <HowWorksBlock />
+      <InviteBlock />
+      <AboutBlock />
     </>
   );
 }
