@@ -2,8 +2,6 @@ import * as React from "react";
 import Container from "./Container";
 import TextComponent from "./TextComponent";
 import { Button, Text } from "@mantine/core";
-import { Link } from "gatsby";
-import SvgIcon from "./SvgIcon";
 
 interface RequestSubBlockProps {
   className?: string;

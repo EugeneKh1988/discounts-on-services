@@ -8,6 +8,7 @@ import InviteBlock from "../components/InviteBlock";
 import AboutBlock from "../components/AboutBlock";
 import FaqBlock from "../components/FaqBlock";
 import RequestSubBlock from "../components/RequestSubBlock";
+import FooterBlock from "../components/FooterBlock";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -21,6 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <AboutBlock />
       <FaqBlock />
       <RequestSubBlock />
+      <FooterBlock />
     </>
   );
 }

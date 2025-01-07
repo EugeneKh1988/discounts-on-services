@@ -20,7 +20,7 @@ const Nav: React.FC<NavProps> = ({ className }) => {
       <Container className="py-[3px] hidden lg:flex">
         <div className="flex items-center gap-2">
           <StaticImage
-            src="../images/logo.png"
+            src="../images/big_logo.png"
             alt="Logo"
             width={55}
             height={55}
