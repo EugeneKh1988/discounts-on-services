@@ -3,7 +3,6 @@ import Container from "./Container";
 import TextComponent from "./TextComponent";
 import { Text } from "@mantine/core";
 import { Link } from "gatsby";
-import SvgIcon from "./SvgIcon";
 import { StaticImage } from "gatsby-plugin-image";
 
 interface AboutBlockProps {

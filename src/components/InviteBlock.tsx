@@ -13,7 +13,7 @@ const InviteBlock: React.FC<InviteBlockProps> = ({ className }) => {
   const classNameValue = className ? `${className}` : "";
   return (
     <Container className={`mt-5 ${classNameValue}`}>
-      <div className="bg-cobalt rounded-[24px] p-5 md:p-8 2xl:px-[80px] 2xl:py-[44px] text-white block md:flex md:items-center md:justify-between md:gap-2">
+      <div className="bg-cobalt rounded-[32px] p-5 md:p-8 2xl:px-[80px] 2xl:py-[44px] text-white block md:flex md:items-center md:justify-between md:gap-2">
         <div>
           <TextComponent type="h3">Invite friends</TextComponent>
           <TextComponent

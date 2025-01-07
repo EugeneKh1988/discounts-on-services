@@ -6,6 +6,8 @@ import SubscriptionBlock from "../components/SubscriptionBlock";
 import HowWorksBlock from "../components/HowWorksBlock";
 import InviteBlock from "../components/InviteBlock";
 import AboutBlock from "../components/AboutBlock";
+import FaqBlock from "../components/FaqBlock";
+import RequestSubBlock from "../components/RequestSubBlock";
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -17,10 +19,12 @@ const IndexPage: React.FC<PageProps> = () => {
       <HowWorksBlock />
       <InviteBlock />
       <AboutBlock />
+      <FaqBlock />
+      <RequestSubBlock />
     </>
   );
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const Head: HeadFC = () => <title>Home Page</title>
