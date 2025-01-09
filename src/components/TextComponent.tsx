@@ -2,7 +2,7 @@ import * as React from "react";
 import { Text } from '@mantine/core';
 
 interface TextProps {
-    children: string,
+    children: React.ReactNode,
     type: string,
     fontWeight?: number,
     color?: string,

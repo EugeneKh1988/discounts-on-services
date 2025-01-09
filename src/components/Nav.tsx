@@ -51,13 +51,13 @@ const Nav: React.FC<NavProps> = ({ className }) => {
               </Button>
             </Menu.Target>
             <Menu.Dropdown>
-              <Menu.Item fz={17} lh="25.5px">
+              <Menu.Item fz={17} lh="25.5px" component={Link} to="/netflix">
                 Netflix
               </Menu.Item>
-              <Menu.Item fz={17} lh="25.5px">
+              <Menu.Item fz={17} lh="25.5px" component={Link} to="/youtube">
                 YouTube Premium
               </Menu.Item>
-              <Menu.Item fz={17} lh="25.5px">
+              <Menu.Item fz={17} lh="25.5px" component={Link} to="/spotify">
                 Spotify
               </Menu.Item>
             </Menu.Dropdown>
@@ -144,7 +144,13 @@ const Nav: React.FC<NavProps> = ({ className }) => {
             width={55}
             height={55}
           />
-          <Text fw={600} fz={16} lh="20.8px" c="woodsmoke.10" className="hidden md:block">
+          <Text
+            fw={600}
+            fz={16}
+            lh="20.8px"
+            c="woodsmoke.10"
+            className="hidden md:block"
+          >
             DiscountsOnServices
           </Text>
         </div>

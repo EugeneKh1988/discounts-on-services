@@ -3,6 +3,7 @@ import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconCircleXFilled, IconMenu2 } from "@tabler/icons-react";
 import * as React from "react";
 import SvgIcon from "./SvgIcon";
+import { Link } from "gatsby";
 
 
 
@@ -34,6 +35,8 @@ const NavMenu: React.FC = () => {
             fz={17}
             lh="25.5px"
             leftSection={<SvgIcon iconName="home" />}
+            component={Link}
+            to="/"
           >
             Home
           </Menu.Item>
@@ -59,13 +62,13 @@ const NavMenu: React.FC = () => {
             Support
           </Menu.Item>
           <Menu.Divider />
-          <Menu.Item fz={17} lh="25.5px">
+          <Menu.Item fz={17} lh="25.5px" component={Link} to="/netflix">
             Netflix
           </Menu.Item>
-          <Menu.Item fz={17} lh="25.5px">
+          <Menu.Item fz={17} lh="25.5px" component={Link} to="/youtube">
             YouTube
           </Menu.Item>
-          <Menu.Item fz={17} lh="25.5px">
+          <Menu.Item fz={17} lh="25.5px" component={Link} to="/spotify">
             Spotify
           </Menu.Item>
           <Menu.Divider />
@@ -116,6 +119,8 @@ const NavMenu: React.FC = () => {
                 lh="25.5px"
                 label="Home"
                 leftSection={<SvgIcon iconName="home" />}
+                component={Link}
+                to="/"
               ></NavLink>
               <NavLink
                 fz={17}
@@ -137,8 +142,20 @@ const NavMenu: React.FC = () => {
               ></NavLink>
             </div>
             <div className="p-6 bg-white mt-4 rounded-[12px]">
-              <NavLink fz={17} lh="25.5px" label="Netflix"></NavLink>
-              <NavLink fz={17} lh="25.5px" label="YouTube"></NavLink>
+              <NavLink
+                fz={17}
+                lh="25.5px"
+                label="Netflix"
+                component={Link}
+                to="/netflix"
+              ></NavLink>
+              <NavLink
+                fz={17}
+                lh="25.5px"
+                label="YouTube"
+                component={Link}
+                to="/youtube"
+              ></NavLink>
               <NavLink fz={17} lh="25.5px" label="Spotify"></NavLink>
             </div>
             <div className="p-6 bg-white mt-4 rounded-[12px]">

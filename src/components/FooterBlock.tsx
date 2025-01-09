@@ -38,15 +38,15 @@ const FooterBlock: React.FC<FooterBlockProps> = ({ className }) => {
               <Text className="text-[18px] leading-[27px] mb-5">
                 Subscriptions
               </Text>
-              <Link to="/">
+              <Link to="/netflix">
                 <TextComponent type="p">Netflix</TextComponent>
               </Link>
-              <Link to="/">
+              <Link to="/youtube">
                 <TextComponent type="p" className="mt-3">
                   YouTube Premium
                 </TextComponent>
               </Link>
-              <Link to="/">
+              <Link to="/spotify">
                 <TextComponent type="p" className="mt-3">
                   Spotify
                 </TextComponent>
