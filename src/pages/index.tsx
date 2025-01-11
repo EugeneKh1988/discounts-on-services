@@ -20,7 +20,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <HowWorksBlock />
       <InviteBlock />
       <AboutBlock />
-      <FaqBlock />
+      <FaqBlock title="FAQ" />
       <RequestSubBlock />
       <FooterBlock />
     </>

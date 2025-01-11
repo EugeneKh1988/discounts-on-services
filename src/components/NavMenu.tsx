@@ -51,6 +51,8 @@ const NavMenu: React.FC = () => {
             fz={17}
             lh="25.5px"
             leftSection={<SvgIcon iconName="question" />}
+            component={Link}
+            to="/faq"
           >
             FAQ
           </Menu.Item>
@@ -133,6 +135,8 @@ const NavMenu: React.FC = () => {
                 lh="25.5px"
                 label="FAQ"
                 leftSection={<SvgIcon iconName="question" />}
+                component={Link}
+                to="/faq"
               ></NavLink>
               <NavLink
                 fz={17}

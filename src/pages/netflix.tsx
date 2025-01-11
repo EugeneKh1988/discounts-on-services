@@ -45,7 +45,7 @@ const NetflixPage: React.FC<PageProps> = () => {
       <Nav />
       <PlanBlock type="netflix" plan={plan} />
       <InviteBlock />
-      <FaqBlock />
+      <FaqBlock title="FAQ" />
       <FooterBlock />
     </>
   );

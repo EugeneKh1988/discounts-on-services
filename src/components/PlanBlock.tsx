@@ -5,7 +5,9 @@ import { Button, Text } from "@mantine/core";
 import { useState } from "react";
 import SegmentedButtons from "./SegmentedButtons";
 import { IconCircleCheckFilled } from "@tabler/icons-react";
-import { useMediaQuery } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
+import { Link } from "gatsby";
+import PurchaseBlock from "./PurchaseBlock";
 
 interface PlanProps {
   type: "netflix" | "youtube" | "spotify";
@@ -31,6 +33,7 @@ const PlanBlock: React.FC<PlanProps> = ({
   const classNameValue = className ? `${className}` : "";
   const [month, setMonthPlan] = useState("6 months");
   const isMobile = useMediaQuery("(max-width: 42em)");
+  const [opened, { open, close }] = useDisclosure(false);
 
   const countPrice = (price: number) => {
     if(month == "6 months") {
@@ -161,6 +164,7 @@ const PlanBlock: React.FC<PlanProps> = ({
                 </Text>
               </div>
               <Button
+                onClick={open}
                 className={`w-full min-h-[48px] 2xl:min-h-[54px] mt-3 2xl:mt-4 text-[15px] leading-[19px] font-medium 2xl:text-[18px] 2xl:leading-[23.4px] rounded-[12px] ${btnBackground(
                   index
                 )}`}
@@ -171,6 +175,7 @@ const PlanBlock: React.FC<PlanProps> = ({
           </div>
         ))}
       </div>
+      <PurchaseBlock opened={opened} onClose={close} isMobile={isMobile ? true: false} />
     </Container>
   );
 };

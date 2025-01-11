@@ -29,7 +29,7 @@ const YoutubePage: React.FC<PageProps> = () => {
       <Nav />
       <PlanBlock type="youtube" plan={plan} />
       <InviteBlock />
-      <FaqBlock />
+      <FaqBlock title="FAQ" />
       <FooterBlock />
     </>
   );

@@ -66,7 +66,7 @@ const Nav: React.FC<NavProps> = ({ className }) => {
             variant="transparent"
             c="mine-shaft.9"
             component={Link}
-            to="/"
+            to="/faq"
             px={5}
           >
             <TextComponent type="menu">FAQ</TextComponent>

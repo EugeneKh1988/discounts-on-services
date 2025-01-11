@@ -35,6 +35,8 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
             mt={54}
             mih={48}
             className="w-full md:w-[135px]"
+            component={Link}
+            to="/netflix"
           >
             Learn more
           </Button>
@@ -60,6 +62,8 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
             mt={54}
             mih={48}
             className="w-full md:w-[135px]"
+            component={Link}
+            to="/spotify"
           >
             Learn more
           </Button>
@@ -85,6 +89,8 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
             mt={54}
             mih={48}
             className="w-full md:w-[135px]"
+            component={Link}
+            to="/youtube"
           >
             Learn more
           </Button>

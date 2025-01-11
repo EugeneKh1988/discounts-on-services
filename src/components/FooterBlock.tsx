@@ -59,7 +59,7 @@ const FooterBlock: React.FC<FooterBlockProps> = ({ className }) => {
               <Link to="/">
                 <TextComponent type="p">About</TextComponent>
               </Link>
-              <Link to="/">
+              <Link to="/faq">
                 <TextComponent type="p" className="mt-3">
                   FAQ
                 </TextComponent>

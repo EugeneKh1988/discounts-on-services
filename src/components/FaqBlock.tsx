@@ -4,6 +4,7 @@ import TextComponent from "./TextComponent";
 import { Accordion, Button, Text } from "@mantine/core";
 
 interface FaqBlockProps {
+  title: string;
   className?: string;
 }
 
@@ -43,7 +44,7 @@ const questions: IQuestion[] = [
   },
 ];
 
-const FaqBlock: React.FC<FaqBlockProps> = ({ className }) => {
+const FaqBlock: React.FC<FaqBlockProps> = ({ className, title }) => {
   const classNameValue = className ? `${className}` : "";
 
   const items = questions.map((item) => (
@@ -56,7 +57,7 @@ const FaqBlock: React.FC<FaqBlockProps> = ({ className }) => {
   return (
     <Container className={`mt-[120px] ${classNameValue}`}>
       <TextComponent type="h2" className="text-woodsmoke text-center mb-9">
-        FAQ
+        {title}
       </TextComponent>
       <Accordion
         variant="separated"

@@ -44,7 +44,7 @@ const SpotifyPage: React.FC<PageProps> = () => {
       <Nav />
       <PlanBlock type="spotify" plan={plan} />
       <InviteBlock />
-      <FaqBlock />
+      <FaqBlock title="FAQ" />
       <FooterBlock />
     </>
   );
