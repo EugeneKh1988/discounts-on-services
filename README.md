@@ -46,4 +46,5 @@
 
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-Пример доступен по ссылке https://spectacular-stardust-6e6323.netlify.app
+Реализован шаблон по ссылке https://www.figma.com/design/aqDFfWbmcB5KzMsXThLmEf/?node-id=217-1035&t=Mse6Nf6eAykmJzeo-0
+Результат здесь https://spectacular-stardust-6e6323.netlify.app
