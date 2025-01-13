@@ -7,6 +7,8 @@ import { Link } from "gatsby";
 import SvgIcon from "./SvgIcon";
 import { StaticImage } from "gatsby-plugin-image";
 import NavMenu from "./NavMenu";
+import { useDisclosure } from "@mantine/hooks";
+import LoginBlock from "./LoginBlock";
 
 interface NavProps {
     className?: string,
@@ -14,7 +16,9 @@ interface NavProps {
 
 
 const Nav: React.FC<NavProps> = ({ className }) => {
+  const [loginOpened, { open, close }] = useDisclosure(false);
   const classNameValue = className ? `${className}` : "";
+
   return (
     <div className={`bg-white ${classNameValue}`}>
       <Container className="py-[3px] hidden lg:flex">
@@ -131,7 +135,7 @@ const Nav: React.FC<NavProps> = ({ className }) => {
               </Menu.Item>
             </Menu.Dropdown>
           </Menu>
-          <Button color="cobalt.8" c="white" radius={12} px={41}>
+          <Button color="cobalt.8" c="white" radius={12} px={41} onClick={open}>
             Log in
           </Button>
         </div>
@@ -154,7 +158,8 @@ const Nav: React.FC<NavProps> = ({ className }) => {
             DiscountsOnServices
           </Text>
         </div>
-        <NavMenu />
+        <NavMenu openLoginMenu={open} />
+        <LoginBlock opened={loginOpened} onClose={close} />
       </Container>
     </div>
   );

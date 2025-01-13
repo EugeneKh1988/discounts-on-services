@@ -5,14 +5,15 @@ import * as React from "react";
 import SvgIcon from "./SvgIcon";
 import { Link } from "gatsby";
 
+interface NavMenuProps {
+  openLoginMenu: () => void;
+}
 
 
-
-const NavMenu: React.FC = () => {
+const NavMenu: React.FC<NavMenuProps> = ({ openLoginMenu }) => {
   const [opened, { open, close }] = useDisclosure(false);
   const isMobile = useMediaQuery("(max-width: 42em)");
   const isDesktop = useMediaQuery("(min-width: 64em)");
-
 
   const menu = (target: React.ReactNode) => {
     return (
@@ -84,6 +85,7 @@ const NavMenu: React.FC = () => {
             fw={700}
             fz={15}
             lh="19.5px"
+            onClick={() => {openLoginMenu(); close()}}
           >
             Login
           </Button>
@@ -102,7 +104,7 @@ const NavMenu: React.FC = () => {
         </Menu.Dropdown>
       </Menu>
     );
-  }
+  };
 
   const modal = (target: React.ReactNode) => {
     return (
@@ -173,6 +175,10 @@ const NavMenu: React.FC = () => {
                 fw={700}
                 fz={15}
                 lh="19.5px"
+                onClick={() => {
+                  openLoginMenu();
+                  close();
+                }}
               >
                 Login
               </Button>
@@ -194,7 +200,7 @@ const NavMenu: React.FC = () => {
         {target}
       </>
     );
-  }
+  };
 
   const targetEl = (
     <ActionIcon
@@ -205,11 +211,7 @@ const NavMenu: React.FC = () => {
       {opened ? <IconCircleXFilled /> : <IconMenu2 />}
     </ActionIcon>
   );
-  return (
-    <>
-      {isMobile ? modal(targetEl): (!isDesktop ? (menu(targetEl)): null)}
-    </>
-  );
+  return <>{isMobile ? modal(targetEl) : !isDesktop ? menu(targetEl) : null}</>;
 };
 
 export default NavMenu;
